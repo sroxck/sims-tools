@@ -1,0 +1,41 @@
+{
+  "name": "sims-tools",
+  "files": [
+    "dist/*"
+  ],
+  "version": "0.3.2",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./*": {
+      "import": "./dist/es/*",
+      "require": "./dist/cjs/*"
+    }
+  },
+  "scripts": {
+    "b": "rollup --config",
+    "bs": "sh build.sh",
+    "dev": "vite --open --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview --open"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "jest": "^28.1.1",
+    "rollup": "^2.75.7",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "rollup-plugin-esbuild": "^4.9.1"
+  }
+}
