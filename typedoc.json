@@ -1,6 +1,4 @@
 {
-  "inputFiles": ["./package/index.ts"],
-  "mode": "modules",
-  "out": "docs",
-  "exclude": "package/index.ts"
+  "entryPoints": ["package/index.ts"],
+  "out": "docs"
 }
