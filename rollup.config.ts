@@ -2,7 +2,7 @@ import path from 'path'
 import typescript from 'rollup-plugin-typescript2';
 import esbuild from 'rollup-plugin-esbuild'
 import { terser } from 'rollup-plugin-terser'
-  const input = 'src/index.ts'
+  const input = 'package/index.ts'
 
 export default [
   {
@@ -22,7 +22,7 @@ export default [
             sourceMap: false,
             declaration: true,
             declarationMap: false,
-            rootDir: './src',
+            rootDir: './package',
             outDir: 'dist',
             declarationDir: 'dist'
           }
@@ -36,7 +36,7 @@ export default [
     ]
   },
   {
-    input: 'src/index.ts',
+    input: 'package/index.ts',
     output: [
       {
         preserveModules: true,
@@ -55,7 +55,7 @@ export default [
     ]
   },
   {
-    input: 'src/index.ts',
+    input: 'package/index.ts',
     output: [
       {
         name: 'funt',

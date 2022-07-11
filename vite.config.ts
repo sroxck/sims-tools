@@ -1,5 +1,5 @@
 // vite.config.ts
-import path from 'path'
+import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -10,5 +10,6 @@ export default defineConfig({
       formats: ['es', 'umd'], // default：['es', 'umd']
       fileName: (format) => `index.${format}.js`
     }
-  }
+  },
+ 
 })

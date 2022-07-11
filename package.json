@@ -1,5 +1,6 @@
 {
   "name": "sims-tools",
+ 
   "files": [
     "dist/*"
   ],
