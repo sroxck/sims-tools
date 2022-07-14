@@ -7,8 +7,30 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./package/index.ts">
+   
+    <div id="app">
+      <input type="text" id="input">
+
+    </div>
+    <script type="module" >
+      import {debounce} from './package/index.ts'
+      import {throttle} from './package/index.ts'
+      // test
+      const submit = function(e){
+        console.log(e,this,'22');
+        return 22
+      }
+      document.querySelector('#input').addEventListener('input',debounce(submit,1000,true,(res)=>{
+        console.log(res);
+      }))
+      function scrollTest(){
+  console.log('现在我触发了')
+}
+document.addEventListener('scroll',throttle(scrollTest,1000))
+function ss(...args){
+  console.log(args);
+}
+ss(3,2,43)
     </script>
    
   </body>

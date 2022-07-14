@@ -1,10 +1,9 @@
 {
   "name": "sims-tools",
- 
   "files": [
     "dist/*"
   ],
-  "version": "0.3.2",
+  "version": "0.3.8",
   "exports": {
     ".": {
       "import": "./dist/es/index.js",
