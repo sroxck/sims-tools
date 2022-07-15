@@ -20,7 +20,7 @@
         console.log(e,this,'22');
         return 22
       }
-      document.querySelector('#input').addEventListener('input',debounce(submit,1000,true,(res)=>{
+      document.querySelector('#input').addEventListener('input',throttle(submit,1000,true,(res)=>{
         console.log(res);
       }))
       function scrollTest(){
