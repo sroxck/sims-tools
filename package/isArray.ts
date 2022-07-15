@@ -1,5 +1,5 @@
 import isTag from "./isTag";
 
 export default function isArray(value:any):boolean{
-  return isTag(value,'array')
+  return isTag(value,'Array')
 }

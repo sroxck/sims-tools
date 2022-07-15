@@ -1,7 +1,7 @@
 export default function throttle(
   cb: Function,
   delay: number,
-  trailing: boolean
+  trailing?: boolean
 ) {
   let time: any = 0;
   let timer: NodeJS.Timeout | number | null;
