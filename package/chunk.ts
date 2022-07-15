@@ -1,3 +1,9 @@
+/**
+ * 将给定数组分割为指定位数的二维数组
+ * @param array 要分割的数组
+ * @param size 分割的位数
+ * @returns T[][]
+ */
 function chunk<T>(array: T[], size: number = 1):T[][] {
   // 先做错误处理,传入的数组为null 或者size是负数,或者size不是整数,返回空数组
   const length = array == null ? 0 : array.length;
