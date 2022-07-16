@@ -32,6 +32,6 @@ export default function findMax<T extends maxType>(
     return Math.max.apply(Math, value.map(item=>(<ArrayType>item)[name]))
     
   }
-
+ 
   return [];
 }
