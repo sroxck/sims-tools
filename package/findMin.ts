@@ -6,10 +6,14 @@ interface ArrayType {
 }
 /**
  * 此方法返回数组或对象数组中给定key的最大值
- * findMin([1,2,3]) => 3
+ * findMin([1,2,3]) => 1
+ *  
  * const obj = [{name:'zs',age:18},{name:'zs2',age:19} ]
- * findMin(obj,'age') => 19
- * findMin(obj,'age',true) => {name:'zs2',age:19}
+ * 
+ * findMin(obj,'age') => 18
+ * 
+ * findMin(obj,'age',true) => {name:'zs',age:18}
+ * 
  * @param value
  * @param name
  */

@@ -6,10 +6,15 @@ interface ArrayType {
 }
 /**
  * 此方法返回数组或对象数组中给定key的最大值
- * findMax([1,2,3]) => 3
+ * 
+ * findMax([1,2,3]) => 3   
+ * 
  * const obj = [{name:'zs',age:18},{name:'zs2',age:19} ]
+ * 
  * findMax(obj,'age') => 19
+ * 
  * findMax(obj,'age',true) => {name:'zs2',age:19}
+ * 
  * @param value
  * @param name
  */
