@@ -2,9 +2,13 @@ import isArray from "./isArray"
 import isObject from "./isObject"
 /**
  * 判断给定值是否为空
+ * 
  * isEmpty({}) => true
+ * 
  * isEmpty([]) => false
+ * 
  * isEmpty("") => false
+ * 
  * ...
  * @param value 
  * @returns 

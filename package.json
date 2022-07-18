@@ -3,7 +3,8 @@
   "files": [
     "dist/*"
   ],
-  "version": "0.4.0",
+  "version": "0.4.1",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/es/index.js",
@@ -15,8 +16,9 @@
     }
   },
   "scripts": {
+    "export":"node ./build/index.js",
     "b": "rollup --config",
-    "bs": "sh ./build/build.sh",
+    "bs": " sh ./build/build.sh",
     "dev": "vite --open --host",
     "test": "jest --watch",
     "vtest": "vitest",

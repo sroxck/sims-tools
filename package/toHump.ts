@@ -1,7 +1,10 @@
 import isEmpty from "./isEmpty";
 /**
  * 字符串转驼峰
+ * 
  * the-shy => theShy
+ * 
+ * the_shy => theShy
  * @param value 
  * @returns 
  */
