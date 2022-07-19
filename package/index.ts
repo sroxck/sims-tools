@@ -10,6 +10,7 @@ export {default as isObject} from './isObject'
 export {default as isString} from './isString' 
 export {default as isTag} from './isTag' 
 export {default as noop} from './noop' 
+export {default as once} from './once' 
 export {default as throttle} from './throttle' 
 export {default as toHump} from './toHump' 
 
