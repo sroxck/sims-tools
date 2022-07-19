@@ -1,6 +1,7 @@
 import { resolve, join } from "path";
 import { readdir, stat, readFile, writeFile } from "fs";
 var filePath = resolve("package");
+var jestPath = resolve("test");
 //调用文件遍历方法
 fileDisplay(filePath);
 //文件遍历方法
@@ -21,17 +22,24 @@ function fileDisplay(filePath) {
             var isFile = stats.isFile(); //是文件
             var isDir = stats.isDirectory(); //是文件夹
             if (isFile) {
-              console.log(filedir); // 读取文件内容
               readFile(filedir, "utf8", function (err, files) {
-                // console.log(files);
                 let result = "";
                 component.forEach((item) => {
                   result += `export {default as ${item}} from './${item}' \n`;
+                  stat(resolve(`test/${item}.spec.ts`),function(err, stat) {
+                    if(stat === undefined){
+                      const jest = `import { ${item} } from "../package/index";test('${item}',()=>{})`
+                      writeFile(resolve(`test/${item}.spec.ts`), jest, "utf8", function (err) {
+                        if (err) return console.log(err);
+                      });
+                    }
+                  })
                 });
                 writeFile(filedir, result, "utf8", function (err) {
                   if (err) return console.log(err);
                 });
               });
+
             }
             if (isDir) {
               fileDisplay(filedir); //递归
