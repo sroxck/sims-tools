@@ -12,3 +12,4 @@ export {default as isTag} from './isTag'
 export {default as noop} from './noop' 
 export {default as throttle} from './throttle' 
 export {default as toHump} from './toHump' 
+
