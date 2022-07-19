@@ -1,6 +1,2 @@
-
-                      import { isArray } from "../package/index";
-                      test('isArray',()=>{
-                       
-                      
-                      })
+import { isArray } from "../package/index";
+test('isArray',()=>{})
