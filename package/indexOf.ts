@@ -10,6 +10,8 @@ export default function indexOf<T>(list:T[],value:any){
   while (++index <= list.length){
     if(eq(list[index],value)){
       return index
+    }else{
+      return -1
     }
   }
   return index
