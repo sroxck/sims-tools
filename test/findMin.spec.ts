@@ -1,6 +1,4 @@
-
-                      import { findMin } from "../package/index";
-                      test('findMin',()=>{
-                       
-                      
-                      })
+import { findMin } from "../package/index";
+test('findMin',()=>{
+ 
+})

@@ -1,6 +1,4 @@
-
-                      import { isFunction } from "../package/index";
-                      test('isFunction',()=>{
-                       
-                      
-                      })
+import { isFunction } from "../package/index";
+test('isFunction',()=>{
+ 
+})
