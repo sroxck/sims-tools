@@ -17,6 +17,10 @@ test('findMax and min',()=>{
     name:444,
     age:343
   })
+  expect(findMax([1,2,3,4])).toEqual({
+    name:444,
+    age:343
+  })
   
   expect(findMin(s1,'name',true)).toEqual({
     name:"3",

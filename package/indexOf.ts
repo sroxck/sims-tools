@@ -4,8 +4,8 @@ import eq from "./eq";
  * @param list 
  * @param value 
  */
-export default function indexOf<T>(list:T[],value:any){
-  let index = -1
+export default function indexOf<T>(list:T[],value:any):number{
+  let index:number = -1
   while (++index < list.length){
     if(eq(list[index],value)){
       return index

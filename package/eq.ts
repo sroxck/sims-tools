@@ -10,7 +10,7 @@ import isObject from "./isObject";
  */
 
 export default function eq(value:any,target:any):boolean{
-  
+  // 有bug 如果值 是array 没判断 判断逻辑有问题 需要修改
 if(isObject(value) && isObject(target)){
   let flag = true
   if(Object.keys(target).length !== Object.keys(value).length) return flag

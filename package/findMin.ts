@@ -6,6 +6,7 @@ interface ArrayType {
 }
 /**
  * 此方法返回数组或对象数组中给定key的最大值
+ * 
  * findMin([1,2,3]) => 1
  *  
  * const obj = [{name:'zs',age:18},{name:'zs2',age:19} ]
@@ -17,6 +18,9 @@ interface ArrayType {
  * @param value
  * @param name
  */
+ export default function findMin<T extends Number>(value:T[]):number | Error
+ export default function findMin<T extends Number>(value:T[],name:string):number | Error
+ export default function findMin<T extends ArrayType| Number>(value:T[],name:string,root:boolean):number | object | Error
 export default function findMin<T extends ArrayType | number>(
   value: T[],
   name?: string,
@@ -32,7 +36,7 @@ export default function findMin<T extends ArrayType | number>(
     copy.sort((item: any, old: any) => (<ArrayType>item)[name] - (<ArrayType>old)[name])
     return value = copy[0]
   } else {
-    if (isNaN(Math.min.apply(Math, value.map(item => (<ArrayType>item)[name])))) throw new TypeError("参数类型不可被排序")
-    return Math.min.apply(Math, value.map(item => (<ArrayType>item)[name]))
+    if (isNaN(Math.min.apply(Math, value.map(item => (<ArrayType>item)[name as string])))) throw new TypeError("参数类型不可被排序")
+    return Math.min.apply(Math, value.map(item => (<ArrayType>item)[name as string]))
   }
 }
