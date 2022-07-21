@@ -6,6 +6,13 @@
  * @param cb 回调函数,可获取执行函数返回值
  * @returns
  */
+interface enhanceType {
+  (): void,
+  cancel(): void,
+}
+ export default function debounce(fn: Function, delay: number): enhanceType
+ export default function debounce(fn: Function, delay: number,immediate: boolean): enhanceType
+ export default function debounce(fn: Function, delay: number,immediate: boolean,cb: Function): enhanceType
 export default function debounce(
   fn: Function,
   delay: number,
