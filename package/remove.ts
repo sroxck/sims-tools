@@ -12,17 +12,12 @@ import indexOf from "./indexOf"
     for (let index = 0; index < args.length;) {
       const pos = indexOf(value,args[index])
       console.log(pos,value,args[index]);
-      
       if(pos > -1){
-        
         value.splice(pos,1)
       }else{
         index++
       }
-      
     }
-    console.log(222);
-    
   }
   return value
 }

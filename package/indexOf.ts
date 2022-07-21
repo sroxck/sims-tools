@@ -5,14 +5,11 @@ import eq from "./eq";
  * @param value 
  */
 export default function indexOf<T>(list:T[],value:any){
-  // console.log(value,list);
   let index = -1
-  while (++index <= list.length){
+  while (++index < list.length){
     if(eq(list[index],value)){
       return index
-    }else{
-      return -1
     }
   }
-  return index
+  return -1
 }
