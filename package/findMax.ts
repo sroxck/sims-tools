@@ -32,6 +32,7 @@ export default function findMax<T extends ArrayType | Number>(
   if (name && root) {
     // 这里需要更优雅，原生的解决方案
     const copy = JSON.parse(JSON.stringify(value))
+    // if(!(<ArrayType>copy)[0][name]) return -1
     copy.sort((item: any, old: any) => (<ArrayType>old)[name] - (<ArrayType>item)[name])
     return value = copy[0]
   } else {
