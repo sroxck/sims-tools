@@ -1,8 +1,7 @@
 import isArray from "./isArray";
 import noop from "./noop";
 
-
-type ArrayType = Record<string,any>
+import {ArrayType} from '../types'
 /**
  * 此方法返回数组或对象数组中给定key的最大值
  * 

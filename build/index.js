@@ -34,6 +34,16 @@ function fileDisplay(filePath) {
                       });
                     }
                   })
+
+                  fs.stat(path.resolve(`docs/docs/${item}.md`),function(err, stat) {
+                    if(stat === undefined){
+                      const jest = "# " +item + "\n\n### 参数 \n\n1. \n\n2. \n\n3. \n\n### 返回值 \n\n``` ts \n\n``` \n\n### 类型 \n\n``` ts \n\n``` \n\n### 示例 \n\n``` ts\n\n``` \n\n"
+                      fs.writeFile(path.resolve(`docs/docs/${item}.md`), jest, "utf8", function (err) {
+                        if (err) return console.log(err);
+                      });
+                    }
+                  })
+                  
                 });
                 fs.writeFile(filedir, result, "utf8", function (err) {
                   if (err) return console.log(err);

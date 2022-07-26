@@ -1,9 +1,7 @@
+import { ArrayType } from "../types";
 import isArray from "./isArray";
 import noop from "./noop";
 
-interface ArrayType {
-  [key: string]: any
-}
 /**
  * 此方法返回数组或对象数组中给定key的最大值
  * 
