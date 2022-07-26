@@ -1,4 +1,9 @@
-
+/**
+ * 遍历给定数组,返回给定函数返回真值的集合
+ * @param list 
+ * @param fn 
+ * @returns 
+ */
 export default function find<T>(list: T[], fn: Function): T[] {
   let index = -1;
   let res = []
