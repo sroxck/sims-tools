@@ -58,7 +58,7 @@ export default [
     input: 'package/index.ts',
     output: [
       {
-        name: 'funt',
+        name: 'sims-tools',
         dir: 'dist/umd',
         format: 'umd'
       }

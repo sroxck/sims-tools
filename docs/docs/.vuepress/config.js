@@ -41,11 +41,16 @@ module.exports = {
           '/array/each',
           '/array/chunk',
           '/array/compact',
+          '/array/find',
+          '/array/findIndex',
+          '/array/indexOf',
+          '/array/remove',
+          '/array/merge',
         ]
       },
       {
         title: '字符串',
-        path: '/string/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         children: [ 
           '/string/toHump',
         ],

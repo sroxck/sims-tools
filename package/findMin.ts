@@ -1,4 +1,5 @@
-import { ArrayType } from "../types";
+type ArrayType = Record<string,any>
+
 import isArray from "./isArray";
 import noop from "./noop";
 

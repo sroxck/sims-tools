@@ -5,7 +5,7 @@
  */
 
 // tudo 优化此函数
-function escapeDate(value:string|Date,type:string = 'yyyy-mm-dd'):string|void|Date{
+export default function escapeDate(value:string|Date,type:string = 'yyyy-mm-dd'):string|void|Date{
  const time:Date = new Date(value)
  let date:Date|string|void;
  const year = time.getFullYear()
@@ -36,5 +36,4 @@ function escapeDate(value:string|Date,type:string = 'yyyy-mm-dd'):string|void|Da
   return date
   
 }
-console.log(escapeDate(new Date,'yyyy-mm-dd hh:mm:ss week'));
 
