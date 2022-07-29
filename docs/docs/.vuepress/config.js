@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Sroxck',
+  title: 'sims-tools',
   description: '技术文档',
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
@@ -36,17 +36,34 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [
-          '/array/findMax',
-          '/array/findMin',
-          '/array/each',
           '/array/chunk',
           '/array/compact',
+          '/array/each',
           '/array/find',
+          '/array/findMax',
+          '/array/findMin',
           '/array/findIndex',
           '/array/indexOf',
-          '/array/remove',
           '/array/merge',
+          '/array/remove',
         ]
+      },
+      {
+        title: '集合',
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/string/toHump',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
+      
+      {
+        title: '对象',
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/string/toHump',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       },
       {
         title: '字符串',
@@ -55,7 +72,42 @@ module.exports = {
           '/string/toHump',
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-      }
+      },
+      {
+        title: '函数',
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/string/toHump',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
+      {
+        title: '日期',
+        path: '/date/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/date/toHump',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
+      {
+        title: '正则',
+        path: '/date/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/date/toHump',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
+      {
+        title: '类型',
+        path: '/type/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [ 
+          '/type/isArray',
+          '/type/isFunction',
+          '/type/isObject',
+          '/type/isString',
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
     ],
 
     plugins: [

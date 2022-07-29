@@ -2,32 +2,19 @@
 sidbar:'auto'
 ---
 
-### 安装
+# 数组方法
 
-``` bash
-yarn add sims-tools # 或者：npm install sims-tools
-```
+ * [将给定数组分割为指定位数的二维数组](./chunk.md)
+ * [去除数组中falsey值](./compact.md)
+ * [遍历数组](./each.md)
+ * [查找数组中最大值,包含引用类型](./findMax.md)
+ * [查找数组中最小值,包含引用类型](./findMin.md)
+ * [查找数组中给定值的索引,包含引用类型](./indexOf.md)
+ * [删除数组中所有与给定值相同的值,包含引用类型](./remove.md)
+ * [通过给定key,合并数组中指定的value](./merge.md)
 
-### 引入全局对象
-``` ts
-import tools from 'sims-tools'
+::: tip 提示
+标 * 表示该方法支持引用类型的全等比较   
+标 ! 表示该方法处于试验阶段,可能在未来版本有变更
+:::
 
-// 使用
-tools.isEmpty(null)
-```
-
-### 单独引入函数
-``` ts
-import { isEmpty } from 'sims-tools'
-
-// 使用
-isEmpty(null)
-```
-
-### 按需引入
-``` ts
-import { merge } from 'sims-tools/merge'
-
-// 使用
-isEmpty(null)
-```

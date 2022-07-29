@@ -14,4 +14,33 @@ features:
   details: 对lodash函数结合国人工作习惯,场景,对函数进行优化封装,提升易用性
 # footer: Sroxck的个人博客
 --- 
- 
+
+### 安装
+
+``` bash
+yarn add sims-tools # 或者：npm install sims-tools
+```
+
+### 全局引入
+``` ts
+import tools from 'sims-tools'
+
+// 使用
+tools.isEmpty(null)
+```
+
+### 单独引入
+``` ts
+import { isEmpty } from 'sims-tools'
+
+// 使用
+isEmpty(null)
+```
+
+### 按需引入
+``` ts
+import { isEmpty } from 'sims-tools/isEmpty'
+
+// 使用
+isEmpty(null)
+```

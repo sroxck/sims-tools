@@ -1,4 +1,4 @@
-# find
+# indeOf *
 
 ### 参数 
 
