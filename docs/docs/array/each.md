@@ -1,5 +1,5 @@
-# each
-给定数组进行迭代,可通过返回"each_break"退出迭代
+# each !
+给定数组进行迭代,可通过返回false退出迭代
 ### 参数
  1. value `T[]` 迭代数组
  2. _fn `Function` 迭代函数
@@ -22,7 +22,7 @@ test('each', () => {
   each<Number>([1, 2, 3], (_item: any) => {
     index += _item
     if (index == 2) {
-      return 'each_break'
+      return false
     }
   })
   expect(index).toBe(3)
