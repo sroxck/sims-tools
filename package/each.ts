@@ -12,7 +12,7 @@
 //     }
 //   }
 // }
-function each<T>(collection:T[],iteratee:Function):void {
+function each():void {
   return 
 }
 export default each

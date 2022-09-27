@@ -83,17 +83,17 @@ module.exports = {
       },
       {
         title: '日期',
-        path: '/date/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         children: [ 
-          '/date/toHump',
+          '/string/toHump',
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       },
       {
         title: '正则',
-        path: '/date/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        path: '/string/toHump',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         children: [ 
-          '/date/toHump',
+          '/string/toHump',
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       },

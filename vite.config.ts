@@ -1,8 +1,12 @@
 // vite.config.ts
 import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
-
+import Intermediary from './plugins/vite-plugin-intermediary'
 export default defineConfig({
+  plugins:[Intermediary({
+    dir:'./package',
+    output:'exports.ts'
+  })],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
