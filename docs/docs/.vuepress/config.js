@@ -46,6 +46,7 @@ module.exports = {
           '/array/indexOf',
           '/array/merge',
           '/array/remove',
+          '/array/removeByIndex',
         ]
       },
       {

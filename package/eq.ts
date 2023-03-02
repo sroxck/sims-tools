@@ -9,32 +9,37 @@ import isObject from "./isObject";
  * @param target 
  */
 
-export default function eq(value:any,target:any):boolean{
+export default function eq(value: any, target: any): boolean {
   // 有bug 如果值 是array 没判断 判断逻辑有问题 需要修改
-  if(isNaN(value) && isNaN(target)) return true
-if(isObject(value) && isObject(target)){
-  let flag = true
-  if(Object.keys(target).length !== Object.keys(value).length) return flag
-  for (const key in value) {
-    if (!Object.prototype.hasOwnProperty.call(target, key)) {
-      flag = false
-    }
-    if(typeof value[key] !== typeof target[key]){
-      flag = false
-    }
+  console.log(value,target,'value1')
+  // if (isNaN(value) && isNaN(target)) return true
+  console.log(value,target,'value2')
 
-    if(value[key] !== target[key] ) {
-      flag = false
-    }
+  if (isObject(value) && isObject(target)) {
+  console.log(value,target,'value3')
 
-    if(isArray(value[key]) || isObject(target[key])){
-      flag = eq(value[key],target[key])
+    let flag = true
+    if (Object.keys(target).length !== Object.keys(value).length) return flag
+    for (const key in value) {
+      if (!Object.prototype.hasOwnProperty.call(target, key)) {
+        flag = false
+      }
+      if (typeof value[key] !== typeof target[key]) {
+        flag = false
+      }
+
+      if (value[key] !== target[key]) {
+        flag = false
+      }
+
+      if (isArray(value[key]) || isObject(target[key])) {
+        flag = eq(value[key], target[key])
+      }
     }
+    return flag
+  } else {
+    return value === target
   }
-  return flag
-}else{
-  return value === target
-}
 }
 /**
  * 1. 双方都是对象,则进入判断

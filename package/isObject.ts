@@ -14,8 +14,9 @@
  * // => false
  */
 function isObject(value:any): boolean{
+  if(value === null) return false
   const type = typeof value 
-  return type !== null && (type === 'object' || type === 'function')
+  return type !== null && (type === 'object' )
 }
 export default isObject
 // typeof null 得到 object 需要排除

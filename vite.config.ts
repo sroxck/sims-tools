@@ -5,7 +5,8 @@ import Intermediary from './plugins/vite-plugin-intermediary'
 export default defineConfig({
   plugins:[Intermediary({
     dir:'./package',
-    output:'exports.ts'
+    output:'exports.ts',
+    scan:true,
   })],
   build: {
     lib: {
